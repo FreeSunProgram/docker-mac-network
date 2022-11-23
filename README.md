@@ -40,3 +40,8 @@ Since containers running in host networking mode in Docker for Mac cannot bind p
  * To route extra subnets, add extra `route` statements in your `docker-for-mac.ovpn`
  * To setup static IP addresses for containers, check the `app_net` examples in the [Compose file reference](https://docs.docker.com/compose/compose-file/)
  * To regenerate all files, remove `config/*` and `docker-for-mac.ovpn`
+
+在文件结尾处route 行前一行加上 comp-lzo no,修改后文件结尾处如下：
+
+comp-lzo no
+route 172.16.0.0 255.240.0.0
